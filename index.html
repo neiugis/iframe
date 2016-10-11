@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Add Maps to Portfolio</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+    <body>
+<div class="container">
+  <br><h1> How to add web maps to your portfolio website? </h1><br>
+  <div class="row">
+      <div class="box">
+
+
+      <ul>
+        <h3>Step 1. Define height and margins</h3>
+        <p>Our portfolio webpage has a title bar, which may hide the top portion of the maps and cause inproper display. So let's fix that by adding margins first. In addition, we will also add a fixed height for the map containers.</p>
+      <li>Edit your <code>index.html</code> file, copy the following lines and paste them inside the <code>head</code> section: <br>
+      <pre>&lt;style&gt;
+    body &#123;
+        height: 700px;
+    &#125;
+
+    @media (min-width: 768px) &#123;
+      .item&#123;
+        margin-top: 50px;
+      &#125;
+      .carousel-caption&#123;
+        bottom: 70px;
+      &#125;
+    &#125;
+    @media (max-width: 767px) &#123;
+      .item&#123;
+        margin-top: 100px;
+      &#125;
+      .carousel-caption&#123;
+        bottom: 120px;
+      &#125;
+    &#125;
+&lt;/style&gt;</pre>
+Specifically, we have added fixed height for the map containers to be <code>700px</code>. You may use other numbers, if you want to have a different height. <br><br>
+We have also adjusted the top margin of the web maps to be added and the bottom margin of the captions. The margins will also automatically adjust based on browser window size so that your website can be displayed properly when viewed from tablet and/or smart phones.
+
+</li><br>
+<h3>Step 2. Add maps using the <code>iframe</code> tag</h3>
+<li>Find the <code>div</code> sections that contain the placeholders for adding the web maps (see image below). The example below shows the <code>div</code> containers for the first three maps, as indicated by their captions <i>e.g., Caption 1, Caption 2, Caption 3</i>.</li><br>
+<img src="img/div.png" width=970 px> <br><br>
+<li>To replace the placeholders with your maps, simply replace the line of the placeholder <code>div</code> with <code>iframe</code> that point to your map html files (You may consider using relative URL in this case).
+  <br><br><i>See below for an example of how I added my map1.html.</i> You will need to specify the <code>width</code> as <code>100%</code>, and the <code>height</code> as some pixels (px) according to what you have used earlier in <code>style</code> (inside <code>head</code>).</li><br>
+<img src="img/iframe.png" width=650 px><br><br>
+<p>Note: the <code>map1.html</code> file is saved in the <code>map</code> folder (see image below).</p>
+<img src="img/folder.png" width=600 px><br><br>
+
+<p><i class="fa fa-hand-o-right" aria-hidden="true"></i> About <code>height</code>: For my <code>map1.html</code>, I have used <code>650px</code> as the height for the <code>div</code> container in order to show the map (see image below):</p>
+<img src="img/height.png" width=430 px><br><br>
+
+
+
+
+<h3>Step 3. Change time intervals between slides</h3>
+<li>Scroll down to the bottom part of your html file to find the following lines. </li><br>
+<img src="img/speed.png" width=420 px>
+  <li>The <code>5000</code> indicates the time interval between two subsequent slides is <b>5000 miliseconds</b>, which equals 5 seconds. You can change the number if you want the intervals to be longer or shorter. Fox example, I changed it to 10000 to have a 10-second interval.</li>
+
+
+<br><br>
+
+</ul>
+      </div>
+      </div>
+</div>
+   </body>
+</html>
